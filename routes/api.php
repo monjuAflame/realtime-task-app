@@ -29,6 +29,12 @@ Route::controller(MemberController::class)->group(function(){
 
 Route::controller(TaskController::class)->group(function(){
     Route::post('/tasks','createTask');
+    Route::post('tasks/not_started_to_pending','TaskToNotStartedToPending');
+    Route::post('tasks/not_started_to_completed','TaskToNotStartedToCompleted');
+    Route::post('tasks/pending_to_completed','TaskToPendingToCompleted');
+    Route::post('tasks/pending_to_not_started','TaskToPendingToNotStarted');
+    Route::post('tasks/completed_to_pending','TaskToCompletedToPending');
+    Route::post('tasks/completed_to_not_started','TaskToCompletedToNotStarted');
    
 });
 
