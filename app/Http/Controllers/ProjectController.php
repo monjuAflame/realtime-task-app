@@ -99,4 +99,10 @@ class ProjectController extends Controller
         ]);
         return response(['message'=>'project pinned on dashboard !']);
     }
+
+    public function countProject()
+    {
+       $count= Project::count();
+       return response(['count'=>$count]);
+    }
 }
